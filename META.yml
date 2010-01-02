@@ -1,0 +1,20 @@
+---
+abstract: 'Generate tests from HTTP requests'
+author:
+  - 'Moritz Onken <onken@netcubed.de>'
+generated_by: 'Dist::Zilla version 1.093400'
+license: bsd
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: CatalystX-Test-Recorder
+requires:
+  List::Util: 0
+  Moose: 0
+  Moose::Role: 0
+  Perl::Tidy: 0
+  Template::Alloy: 0
+  WWW::Mechanize: 1.60
+resources:
+  repository: http://github.com/monken/p5-catalystx-test-recorder
+version: 0.99
