@@ -1,5 +1,5 @@
 package MyApp::Controller::Root;
-our $VERSION = '0.99';
+our $VERSION = '0.991';
 use strict;
 use warnings;
 use base 'Catalyst::Controller';    

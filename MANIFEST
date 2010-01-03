@@ -1,8 +1,10 @@
+Changes
 LICENSE
 MANIFEST
 META.yml
 Makefile.PL
 README
+README.mkdn
 dist.ini
 lib/CatalystX/Test/Recorder.pm
 lib/CatalystX/Test/Recorder/Controller.pm

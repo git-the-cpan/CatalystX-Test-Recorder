@@ -1,9 +1,6 @@
 NAME
     CatalystX::Test::Recorder - Generate tests from HTTP requests
 
-VERSION
-    version 0.991
-
 SYNOPSIS
       package MyApp;
       use Moose;
@@ -41,7 +38,7 @@ SYNOPSIS
       $response = $mech->request($request);
 
       done_testing;
-
+  
 DESCRIPTION
     In order to test your application thoroughly you have to write a lot of
     tests, to ensure all controllers and actions are set up properly. This
@@ -54,8 +51,6 @@ DESCRIPTION
     code only. This is where the real work begins. See
     Test::WWW::Mechanize::Catalyst for more testing goodness.
 
-    This plugin should only be used in a development environment.
-
 CONFIGURATION
       package MyApp;
       ...
@@ -66,34 +61,31 @@ CONFIGURATION
 
   namespace
     Sets the namespace under which the start and stop actions are located.
-    Defaults to "recorder".
+    Defaults to `recorder'.
 
   skip
     This is an arrayref of regexprefs. Requests, whose path matches on of
-    these regexes, will not be recorded. Defaults to "qr/^static\//,
-    qr/^favicon.ico/".
+    these regexes, will not be recorded. Defaults to `qr/^static\//,
+    qr/^favicon.ico/'.
 
   template
     Specify the path to a Template::Alloy (TT dialect) file which is used to
     render the test. For reference, the default template is available in the
-    "__DATA__" section of "CatalystX::Test::Recorder::Controller".
+    `__DATA__' section of `CatalystX::Test::Recorder::Controller'.
 
     The following variables are avaiable from the template:
 
-    *   requests
-
+    * requests
         An arrayref of Catalyst::Request objects.
 
-    *   responses
-
+    * responses
         An arrayref of Catalyst::Response objects.
 
-    *   app
-
+    * app
         The name of the current application.
 
 AUTHOR
-    Moritz Onken, "onken@netcubed.de"
+    Moritz Onken, `onken@netcubed.de'
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2010 by Moritz Onken.

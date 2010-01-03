@@ -1,5 +1,5 @@
 package CatalystX::Test::Recorder;
-our $VERSION = '0.99';
+our $VERSION = '0.991';
 
 use strict;
 use warnings;
@@ -35,7 +35,7 @@ CatalystX::Test::Recorder - Generate tests from HTTP requests
 
 =head1 VERSION
 
-version 0.99
+version 0.991
 
 =head1 SYNOPSIS
 
@@ -84,6 +84,8 @@ and actions are set up properly. This can be quite a pain, especially for large 
 This module provides a test skeleton from HTTP requests to your application. It captures body parameters as well
 as query parameters and handles all HTTP request methods. The generated test checks the response code only. This is
 where the real work begins. See L<Test::WWW::Mechanize::Catalyst> for more testing goodness.
+
+This plugin should only be used in a development environment.
 
 =head1 CONFIGURATION
 
