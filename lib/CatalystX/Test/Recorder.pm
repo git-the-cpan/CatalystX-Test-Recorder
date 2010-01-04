@@ -1,5 +1,5 @@
 package CatalystX::Test::Recorder;
-our $VERSION = '0.991';
+our $VERSION = '0.992';
 
 use strict;
 use warnings;
@@ -35,7 +35,7 @@ CatalystX::Test::Recorder - Generate tests from HTTP requests
 
 =head1 VERSION
 
-version 0.991
+version 0.992
 
 =head1 SYNOPSIS
 

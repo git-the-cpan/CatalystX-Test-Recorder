@@ -14,8 +14,9 @@ requires:
   Moose::Role: 0
   Perl::Tidy: 0
   Template::Alloy: 0
+  Test::More: 0.94
   Test::WWW::Mechanize::Catalyst: 0.51
   WWW::Mechanize: 1.60
 resources:
   repository: http://github.com/monken/p5-catalystx-test-recorder
-version: 0.991
+version: 0.992

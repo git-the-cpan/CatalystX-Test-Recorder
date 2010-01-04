@@ -1,5 +1,5 @@
 package CatalystX::Test::Recorder::Controller;
-our $VERSION = '0.991';
+our $VERSION = '0.992';
 
 use Moose;
 use utf8;

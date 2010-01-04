@@ -2,7 +2,7 @@ NAME
     CatalystX::Test::Recorder - Generate tests from HTTP requests
 
 VERSION
-    version 0.991
+    version 0.992
 
 SYNOPSIS
       package MyApp;
