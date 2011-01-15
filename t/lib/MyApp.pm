@@ -1,5 +1,13 @@
+#
+# This file is part of CatalystX-Test-Recorder
+#
+# This software is Copyright (c) 2011 by Moritz Onken.
+#
+# This is free software, licensed under:
+#
+#   The (three-clause) BSD License
+#
 package MyApp;
-our $VERSION = '0.992';
 use Moose;
 extends 'Catalyst';
 __PACKAGE__->config( 'CatalystX::Test::Recorder' => { skip => [qr/^static/], namespace => 'recorder' } );

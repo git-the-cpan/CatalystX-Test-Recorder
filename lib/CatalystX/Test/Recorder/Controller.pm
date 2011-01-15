@@ -1,5 +1,16 @@
+#
+# This file is part of CatalystX-Test-Recorder
+#
+# This software is Copyright (c) 2011 by Moritz Onken.
+#
+# This is free software, licensed under:
+#
+#   The (three-clause) BSD License
+#
 package CatalystX::Test::Recorder::Controller;
-our $VERSION = '0.992';
+BEGIN {
+  $CatalystX::Test::Recorder::Controller::VERSION = '1.0.0';
+}
 
 use Moose;
 use utf8;
@@ -57,13 +68,14 @@ sub stop : Local {
         DUMP    => { html => 0, header => 0 },
         FILTERS => {
             perltidy => sub {
-                my $formated;
+                my $tidy;
                 Perl::Tidy::perltidy(
                     source      => \$_[0],
-                    destination => \$formated,
+                    destination => \$tidy,
+                    argv => [],
                 );
 
-                return $formated;
+                return $tidy;
               }
         }
     );
@@ -75,7 +87,7 @@ sub stop : Local {
             return $dump;
         });
     $tt->process( $self->template || \$template, { requests => $requests, responses => $responses, app => ref $c }, \$test )
-      or die $!;
+      or die $@;
     $c->res->body($test);
 
 }
@@ -86,6 +98,33 @@ sub end : Private {
 }
 
 1;
+
+
+
+=pod
+
+=head1 NAME
+
+CatalystX::Test::Recorder::Controller
+
+=head1 VERSION
+
+version 1.0.0
+
+=head1 AUTHOR
+
+Moritz Onken <onken@netcubed.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Moritz Onken.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
+
 
 __DATA__
 [% FILTER perltidy -%]

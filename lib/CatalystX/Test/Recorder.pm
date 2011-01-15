@@ -1,5 +1,16 @@
+#
+# This file is part of CatalystX-Test-Recorder
+#
+# This software is Copyright (c) 2011 by Moritz Onken.
+#
+# This is free software, licensed under:
+#
+#   The (three-clause) BSD License
+#
 package CatalystX::Test::Recorder;
-our $VERSION = '0.992';
+BEGIN {
+  $CatalystX::Test::Recorder::VERSION = '1.0.0';
+}
 
 use strict;
 use warnings;
@@ -27,15 +38,17 @@ after finalize => sub {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
-CatalystX::Test::Recorder - Generate tests from HTTP requests
+CatalystX::Test::Recorder
 
 =head1 VERSION
 
-version 0.992
+version 1.0.0
 
 =head1 SYNOPSIS
 
@@ -75,7 +88,7 @@ Example output:
   $response = $mech->request($request);
 
   done_testing;
-  
+
 =head1 DESCRIPTION
 
 In order to test your application thoroughly you have to write a lot of tests, to ensure all controllers
@@ -86,6 +99,10 @@ as query parameters and handles all HTTP request methods. The generated test che
 where the real work begins. See L<Test::WWW::Mechanize::Catalyst> for more testing goodness.
 
 This plugin should only be used in a development environment.
+
+=head1 NAME
+
+CatalystX::Test::Recorder - Generate tests from HTTP requests
 
 =head1 CONFIGURATION
 
@@ -141,3 +158,21 @@ This is free software, licensed under:
   The (three-clause) BSD License
 
 =cut
+
+=head1 AUTHOR
+
+Moritz Onken <onken@netcubed.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Moritz Onken.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
+
+
+__END__
+

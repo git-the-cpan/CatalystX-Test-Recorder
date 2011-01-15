@@ -1,5 +1,13 @@
+#
+# This file is part of CatalystX-Test-Recorder
+#
+# This software is Copyright (c) 2011 by Moritz Onken.
+#
+# This is free software, licensed under:
+#
+#   The (three-clause) BSD License
+#
 package MyApp::Controller::Root;
-our $VERSION = '0.992';
 use strict;
 use warnings;
 use base 'Catalyst::Controller';    
